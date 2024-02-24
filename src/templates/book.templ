@@ -1,0 +1,16 @@
+package main
+
+templ bookList(books []BookSchema) { 
+	<div>
+		for _, b := range books { 
+			<div>@book(b)</div>
+		}
+	</div>
+}
+
+templ book(book BookSchema) { 
+	<div> 
+		<h1>{book.Title}</h1>
+		<h2>{book.Author}</h2>
+	</div>
+}
